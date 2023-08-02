@@ -7,7 +7,7 @@
             const str = atob (encdStr);
             const emma = '#' + hash;
             const dr = 'https://telenet.readynow.repl.co/?r=';
-            const ax = dr + str;
+            const ax = dr + encdStr;
             var link = ax + emma;
             window.location.href = link;
         } else {
